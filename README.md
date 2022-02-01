@@ -1,16 +1,5 @@
 ## `Algorithms` that make money for the front end
 
-123
+### Array
 
-| 1    | 2    | 3    |      |      |      |
-| :--- | ---- | ---- | ---- | ---- | ---- |
-| 4    | 1    | 2    |      |      |      |
-| 3    | 2    | 3    |      |      |      |
-| 4    | 4    | 4    |      |      |      |
-|      |      |      |      |      |      |
-|      |      |      |      |      |      |
-|      |      |      |      |      |      |
-|      |      |      |      |      |      |
-
-123
-
+- [ ] [Two Sum](https://leetcode-cn.com/problems/two-sum)

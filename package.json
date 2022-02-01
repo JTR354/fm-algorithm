@@ -1,0 +1,33 @@
+{
+  "name": "fm-algorithm",
+  "version": "1.0.0",
+  "description": "- [ ] [Two Sum](https://leetcode-cn.com/problems/two-sum)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint --ext .js,.ts --ignore-path .gitignore src",
+    "fix": "eslint --ext .js,.ts --ignore-path .gitignore --fix src",
+    "format": "prettier .  --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JTR354/fm-algorithm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JTR354/fm-algorithm/issues"
+  },
+  "homepage": "https://github.com/JTR354/fm-algorithm#readme",
+  "dependencies": {
+    "@types/jest": "^27.4.0",
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^26.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "jest": "^27.4.7",
+    "prettier": "^2.5.1"
+  }
+}
