@@ -2,4 +2,4 @@
 
 ### Array
 
-- [ ] [Two Sum](https://leetcode-cn.com/problems/two-sum)
+- [x] [Two Sum](https://leetcode-cn.com/problems/two-sum)
