@@ -7,12 +7,18 @@ describe('Linked-List', () => {
       linkList.append(2);
       linkList.append(3);
       linkList.append(4);
-      expect(linkList.toString()).toBe('1=>2=>3=>4');
+      expect(linkList.toString()).toEqual([1, 2, 3, 4]);
       expect(linkList.length).toBe(4);
+    });
+    test('init', () => {
+      const head = [1, 2, 3, 4];
+      const linkList = new LinkNodeList(head);
+      expect(linkList.toString()).toEqual(head);
+      expect(linkList.length).toBe(head.length);
     });
     test('empty', () => {
       const linkList = new LinkNodeList();
-      expect(linkList.toString()).toBe('empty');
+      expect(linkList.toString()).toEqual([]);
       expect(linkList.length).toBe(0);
     });
   });

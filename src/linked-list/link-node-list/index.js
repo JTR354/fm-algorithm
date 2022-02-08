@@ -5,23 +5,25 @@ class ListNode {
   }
 }
 class LinkNodeList {
-  constructor() {
+  constructor(head) {
     this.head = null;
-    this.size = 0;
+    this.init(head);
+  }
+  init(head) {
+    head?.forEach((val) => this.append(val));
   }
   get length() {
-    return this.size;
+    return this.toString().length;
   }
   toString() {
     const ret = [];
     let p = this.head;
-    if (!p) return 'empty';
-    while (p.next) {
-      ret.push(p.val);
+    if (!p) return ret;
+    do {
+      p.val != null && ret.push(p.val);
       p = p.next;
-    }
-    ret.push(p.val);
-    return ret.join('=>');
+    } while (p);
+    return ret;
   }
   append(val) {
     const node = new ListNode(val);
@@ -34,7 +36,6 @@ class LinkNodeList {
     } else {
       this.head = node;
     }
-    this.size++;
   }
 }
 module.exports = LinkNodeList;
