@@ -9,3 +9,11 @@ exports.removeElements = function removeElements(head, val) {
   }
   return head;
 };
+
+// exports.removeElements2 = (head, val) => {
+//   if (head == null) {
+//     return head;
+//   }
+//   const ele = { next: head };
+//   let p;
+// };
