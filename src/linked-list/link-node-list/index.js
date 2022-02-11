@@ -19,8 +19,16 @@ class LinkNodeList {
     const ret = [];
     let p = this.head;
     if (!p) return ret;
+    const cache = new Set();
     do {
-      p.val != null && ret.push(p.val);
+      if (cache.has(p)) {
+        ret.push(p.val);
+        break;
+      }
+      if (p.val != null) {
+        ret.push(p.val);
+      }
+      cache.add(p);
       p = p.next;
     } while (p);
     return ret;
@@ -36,6 +44,20 @@ class LinkNodeList {
     } else {
       this.head = node;
     }
+  }
+  setPos(pos) {
+    if (pos == null) return;
+    let p = this.head,
+      i = 0,
+      tmp;
+    while (p.next) {
+      if (i === pos) {
+        tmp = p;
+      }
+      p = p.next;
+      i++;
+    }
+    p.next = tmp;
   }
 }
 module.exports = LinkNodeList;
