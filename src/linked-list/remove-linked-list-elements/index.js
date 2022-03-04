@@ -17,6 +17,7 @@ exports.removeElements2 = (head, val) => {
   let p = ele;
   while (p.next) {
     if (p.next.val === val) {
+      /**清除冗余数据 */
       const next = p.next.next;
       delete p.next.val;
       delete p.next.next;
