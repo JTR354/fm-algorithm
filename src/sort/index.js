@@ -31,13 +31,33 @@ exports.quickSort = function quickSort(arr) {
   return quickSort(left).concat(flag, quickSort(right));
 };
 
-expect.quickSort2 = function quickSort2() {
-  // const flag = arr[0];
-  // let left = arr[1];
-  // let right = arr[arr.length - 1];
-  // while(left < right) {
-  //   while(left < flag) {
-  //     left++
-  //   }
-  // }
+function partition(arr, l, r) {
+  const pivot = arr[l];
+  while (l <= r) {
+    while (l <= r && arr[l] < pivot) {
+      l++;
+    }
+    while (l <= r && arr[r] > pivot) {
+      r--;
+    }
+    if (l <= r) {
+      [arr[l], arr[r]] = [arr[r], arr[l]];
+      l++;
+      r--;
+    }
+  }
+  return [l, r];
+}
+exports.partition = partition;
+exports.quickSort2 = function quickSort2(arr, start, end) {
+  /**
+   * 1. 找一个flag, 找出比它小的放左边,大的放右边
+   * 2. L,R,F; 遍历L>=F,R<=F;找到后交换L,R的元素,L++,R--;
+   * 那么L左边的都会<=F,R右边的都会>=F
+   * 3. 递归整个序列
+   */
+  if (start >= end) return;
+  const [l, r] = partition(arr, start, end);
+  quickSort2(arr, start, r);
+  quickSort2(arr, l, end);
 };
